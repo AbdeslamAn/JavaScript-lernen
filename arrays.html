@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays :</h1>
+
+    <div id="result"></div>
+    <script>
+        const months = ["Januar","Februar","März","April","Mai","Juni",
+                        "Juli","August","September","Oktober","November","Dezember"];
+
+        for (let i = 0; i <= 11; i++) {
+            if (months[i].includes("r")) {
+                document.getElementById("result").innerHTML += months[i] + "<br>";
+                
+            }
+            
+        }   
+    
+
+        let date = '17.05.2025';
+        let dateArray = date.split('.');  //["17", "05", "2025"]
+
+        let tag = dateArray[0];        // 17
+        let monat = months[parseInt(dateArray[1]) - 1]; // 05 - 1 = 4 => Mai
+        let jahr = dateArray[2];       // 2025
+
+        console.log(`${tag}. ${monat} ${jahr}`);
+        // Ergebnis: 17. Mai 2025
+
+    </script>
+</body>
+</html>
