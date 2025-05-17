@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variablen</title>
+</head>
+<body>
+    <div id="result">Variablen</div>
+    <script>
+        let a = 6
+        a = a * 4
+
+        let b = 8 * a
+
+        document.getElementById('result').innerHTML="Der Wert von b beträgt : " + b
+
+        const name = "Abdeslam Anssar"
+        document.getElementById("result").innerHTML += '<br>Mein Name ist : ' + name
+
+        
+        const windowWidth = window.innerWidth
+        document.getElementById('result').innerHTML += '<br> Die Fensterbreite beträgt : ' + windowWidth + " Pixel"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Funktionen</h1>
+
+    <div style="display: flex;">
+        <ul id="result"></ul>
+        <ul id="answer"></ul>
+        <ul id="prices"></ul>
+    </div>
+
+    <script>
+        //Method 1
+        const a = 4 * 1.20
+        const b = 8 * 1.20
+        const c = 10 * 1.20
+
+        const li = document.createElement('li')
+        li.innerHTML = "Bruttopreis : " + a
+        document.getElementById('result').appendChild(li)
+
+        const li2 = document.createElement('li')
+        li2.innerHTML = "Bruttopreis : " + b
+        document.getElementById('result').appendChild(li2)
+
+        const li3 = document.createElement('li')
+        li3.innerHTML = "Bruttopreis : " + c
+        document.getElementById('result').appendChild(li3)
+
+        //Method 2
+        const li4 = document.createElement('li')
+        li4.innerHTML = "Bruttopreis : " + addVat(4)
+        document.getElementById('answer').appendChild(li4)
+
+        const li5 = document.createElement('li')
+        li5.innerHTML = "Bruttopreis : " + addVat(8)
+        document.getElementById('answer').appendChild(li5)
+
+        const li6 = document.createElement('li')
+        li6.innerHTML = "Bruttopreis : " + addVat(10)
+        document.getElementById('answer').appendChild(li6)
+
+        function addVat(number){
+            const result = number * 1.20
+            return result
+        }
+
+        //Method 3
+        displayPrice(4)
+        displayPrice(8)
+        displayPrice(10)
+
+        function displayPrice(number){
+            const result = number * 1.20
+            const li = document.createElement('li')
+            li.innerHTML = "bruttopreis : " + result
+            document.getElementById('prices').appendChild(li)
+        }
+
+    </script>
+</body>
+</html>
