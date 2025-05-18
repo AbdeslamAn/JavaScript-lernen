@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<body>
+
+    <h1 id="css">CSS</h1>
+
+    <input type="text" id="name" placeholder="Farbe / Color" spellcheck="false">
+    <!-- Ändert die Farbe automatisch -->
+    <!-- automatically changes the color  -->
+    <script>
+        document.getElementById('name').addEventListener('input', function(){
+            document.getElementById('css').style.color = this.value;
+        })
+    </script>
+</body>
+</html>
