@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input/Nutzereingaben</title>
+</head>
+<body>
+    <h1>Input/Nutzereingaben :</h1>
+    <h2>Willkommen : <span id="output"></span></h2>
+    <!-- Was man schreibt, wird sofort auf der Webseite angezeigt -->
+     <!-- What you type is immediately displayed on the website -->
+    <input type="text" id="name" placeholder="Dein name" autocomplete="off">
+    <script>
+        document.getElementById('name').addEventListener('input', function hello() {
+            document.getElementById('output').textContent = this.value;
+            
+        })
+    </script>
+    
+</body>
+</html>
