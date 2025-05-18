@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable-Types/Variablen-Typen</title>
+</head>
+<body>
+    <h1>Variable-Types/Variablen-Typen</h1>
+
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+    <script>
+        // Variabletypes : Number, string, Boolean, Array, Object
+
+        const a = "5";
+        const b = 5;
+        const c = true;
+
+        document.getElementById('result').innerHTML = a + b +"<br>" ;
+
+        if (a == b) {
+        document.getElementById('result1').innerHTML = "a und b sind gleich" ;
+            
+        }else{
+        document.getElementById('result1').innerHTML = "a und b sind ungleich" ;
+
+        }
+
+        if (a === b) {
+        document.getElementById('result2').innerHTML = "a und b sind gleich" ;
+            
+        }else{
+        document.getElementById('result2').innerHTML = "a und b sind ungleich" ;
+
+        }
+
+        if (c == false) {
+        document.getElementById('result3').innerHTML = "C ist  falsh" ;
+        
+        }else{
+        document.getElementById('result3').innerHTML = "C ist  rigtig" ;
+            
+        }
+        
+
+    </script>
+
+</body>
+</html>
