@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhr/Analoguhr</title>
+</head>
+<body>
+
+    <style>
+        #clock{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hand{
+            position: absolute;
+            width: 1px;
+            height: 200px;
+            background-color: black;
+            top: 50%;
+            left:  50%;
+            transform-origin: 0 0;
+        }
+        .hour{
+            height: 100px;
+            width: 4px;
+            background-color: blue;
+        }
+        .minute{
+            height: 180px;
+            width: 2px;
+        }
+        .second{
+            height: 170px;
+            width: 1px;
+            background-color: red;
+        }
+    </style>
+
+    <h1><u>Uhr/Analoguhr :</u></h1>
+    
+    <div id="clock">
+        <div class="hand hour" id="hourhand"></div>
+        <div class="hand minute" id="minutehand"></div>
+        <div class="hand second" id="secondhand"></div>
+    </div>
+    <script>
+        sethands()
+        window.setInterval(sethands, 1000)
+
+        function sethands() {
+            const date =  new Date();
+            const hours = date.getHours() % 12;
+            const minute = date.getMinutes();
+            const second = date.getSeconds();
+
+            const hourhand = document.getElementById('hourhand');
+            const minutehand = document.getElementById('minutehand');
+            const secondhand = document.getElementById('secondhand');
+
+
+            //60 minutes must fit in 30 degrees
+            //+180 to rotate the hands to the top
+            //12 hours must fit in 360 degrees: 30 degrees per hour
+            hourhand.style.transform = 'rotate(' + (hours * 30 + minute * (30 / 60) + 180) + 'deg)';
+
+            //60 seconds must fit in 360 degrees: 6 degrees per second
+            minutehand.style.transform = 'rotate(' + (minute * 6 +180) + 'deg)';
+            secondhand.style.transform = 'rotate(' + (second * 6 +180) + 'deg)';
+
+        }
+    </script>
+    
+</body>
+</html>
